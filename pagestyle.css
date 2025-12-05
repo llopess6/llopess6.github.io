@@ -6,6 +6,11 @@ h2
     font-style: italic;
 }
 
+h5
+{
+    font-size: 25px;
+}
+
 h4
 {
     font-size: 4rem;
@@ -14,47 +19,78 @@ h4
     font-style: oblique;
 }
 
+#buttonsback
+{
+    width: 1300px;
+    justify-items: end;
+}
+
 #buttons
 {
     margin: 50px;
-    width: 310px;
-    background-color: white;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .buttonWho
 {
     background-color: rgba(0, 0, 0, 0.375);
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
 }
 
 .buttonHobby
 {
     background-color: rgba(0, 0, 0, 0.375);
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
 }
 
 .buttonSkill
 {
     background-color: rgba(0, 0, 0, 0.375);
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+.buttonExp
+{
+    background-color: rgba(0, 0, 0, 0.375);
+    width: 150px;
+    height: 90px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
 }
 
 .buttonWho:hover
 {
     background-color: rgba(0, 0, 0, 0.575);
+    transform: translateY(-15px)
 }
 
 .buttonHobby:hover
 {
     background-color: rgba(0, 0, 0, 0.575);
+    transform: translateY(-15px)
 }
 
 .buttonSkill:hover
 {
     background-color: rgba(0, 0, 0, 0.575);
+    transform: translateY(-15px)
+}
+
+.buttonExp:hover
+{
+    background-color: rgba(0, 0, 0, 0.575);
+    transform: translateY(-15px)
 }
 
 .darkOrange
@@ -111,7 +147,6 @@ body
 #AB
 {
     height: 300;
-    background-color: white;
     text-align: center;
 }
 
@@ -120,12 +155,12 @@ body
     height: 700px;
     margin:5rem;
     background-color: white;
+    border-radius: 50px;
 }
 
 #carteplus
 {
     height: 600px;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,6 +172,7 @@ body
     margin: 5rem;
     background-color: orange;
     text-align: center;
+    border-radius: 30px;
 }
 
 #casedup
@@ -150,11 +186,16 @@ body
     height: 500px;
     display: flex;
     justify-content: center;
+    justify-content: space-around;
+}
+
+.border
+{
+    border-radius: 50px;
 }
 
 #casedUpw
 {
-    background-color: orange;
     text-align: center;
     flex-flow: row;
 }
@@ -164,39 +205,59 @@ body
     display: flex;
     width: 373px;
     height: 100px;
+    transition: transform 0.3s ease-in-out;
     background-color: skyblue;
     flex-flow: column;
     text-align: center;
+}
+#cased1:hover
+{
+    transform: translateY(-45px) rotate(10deg);
 }
 
 #cased2
 {
     display: flex;
+    transition: transform 0.3s ease-in-out;
     width: 255px;
     height: 100px;
     background-color: white;
     flex-flow: column;
     text-align: center;
 }
+#cased2:hover
+{
+    transform: translateY(-45px) rotate(10deg);
+}
 
 #cased3
 {
     display: flex;
     width: 255px;
+    transition: transform 0.3s ease-in-out;
     height: 300px;
     background-color: green;
     flex-flow: column;
     text-align: center;
+}
+#cased3:hover
+{
+    transform: translateY(-45px) rotate(10deg);
 }
 
 #cased4
 {
     display: flex;
     width: 383px;
+    transition: transform 0.3s ease-in-out;
     height: 300px;
     background-color: maroon;
     flex-flow: column;
     text-align: center;
+}
+#cased4:hover
+{
+    transform: translateY(-45px) rotate(10deg);
 }
 
 #Skills
@@ -204,18 +265,18 @@ body
     height: 700px;
     margin:5rem;
     background-color: white;
+    border-radius: 50px;
 }
 
 #ms
 {
-    background-color: white;
     text-align: center;
 }
 
 #msdown
 {
     height: 500;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.393);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -245,10 +306,113 @@ body
     background-color: rgba(0, 0, 0, 0.375);
 }
 
-#icons
+.carousel {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.corner-btn 
 {
-    background-color: rgba(0, 0, 0, 0);
-    height: 500px;
-    width: 400px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  background-color: white;
+  border-color: orange;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.innerArrow
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+.corner-btn:hover
+{
+    background-color: orange;
+    border-color: white;
+    border-width: 4px;
+    padding: 12px 17px;
+}
+
+.corner-btn:hover .innerArrow
+{
+    transform: translateY(-15px) rotate(10deg);
+}
+
+#experiences
+{
+    height: 700px;
+    margin:5rem;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#expup
+{
     text-align: center;
+}
+
+#expcenter
+{
+    text-align: center;
+}
+
+#expdown
+{
+    height: 500;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.buttonHbtn
+{
+    background-color: white;
+    width: 250px;
+    height: 60px;
+    border-color: orange;
+    border-width: 3px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+.buttonHbtn:hover
+{
+    background-color: orange;
+    border-color: white;
 }

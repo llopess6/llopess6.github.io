@@ -8,10 +8,19 @@
     </head>
 
     <body>
-        <div id="buttons">
-            <button class="buttonWho"><a href=#hello>Who am i?</a></button>
-            <button class="buttonHobby"><a href=#Hobby>My Hobbies</a></button>
-            <button class="buttonSkill"><a href=#Skills>My Skills</a></button>
+        <a href="#buttons"><button class="corner-btn">
+            <div class="innerArrow">
+                <img src="https://cdn-icons-png.flaticon.com/512/4822/4822520.png" width="30px" height="30px">
+            </div>
+        </button></a>
+        <div id="buttonsback">
+            <div id="buttons">
+                <button class="buttonWho"><a href=#hello><h1>Who am i?</h1></a></button>
+                <button class="buttonHobby"><a href=#Hobby><h1>My Hobbies</h1></a></button>
+                <button class="buttonSkill"><a href=#Skills><h1>My Skills</h1></a></button>
+                <button class="buttonExp"><a href=#experiences><h1>My Experience</h1></a></button>
+            </div>
+
         </div>
         <div id="hello">
             <div id="AB"><h2>Who <span class="orange">am i</span>?</h2></div>
@@ -20,7 +29,7 @@
                     <div id="ABdcLeft">
                         <h1>Kapshii Stanislav</h1>
                         <h3>14 years old</h3>
-                        <h3>______________</h3>
+                        <p>___________________________</p>
                         <h3>College Student</h3>
                     </div>
                     <div id="ABdcIn"><h3>I am a <span class="orange">student</span> who at this moment
@@ -64,16 +73,38 @@
         </div>
         <div id="Skills">
             <div id="ms">
-                <h4><span class="skybleu">My</span> Skills</h4>
+                <h4>My<span class="skybleu"> Skills</span></h4>
             </div>
             <div id="msdown">
-                <button class="buttonleft"></button>
-                <div id="icons">
-                    <h1>Good at <span class="skybleu">english</span></h1>
-                    <img src="https://www.kindpng.com/picc/m/136-1368252_education-logo-no-background-hd-png-download.png" height="350px" width="400px">
-                </div>
-                <button class="buttonright"></button>
+            <div class="carousel">
+                <img src="https://th.bing.com/th/id/R.e87eec14f4891eb6046c5761a4ec02d9?rik=kSU8V9b%2bYR%2f7xg&pid=ImgRaw&r=0" class="active">
+                <img src="https://static.vecteezy.com/system/resources/previews/004/908/013/original/coding-logo-design-template-free-vector.jpg">
+                <img src="https://img.freepik.com/premium-vector/gaming-logo-design-icon_877718-206.jpg?w=2000">
+
+                <button class="prev">⟨</button>
+                <button class="next">⟩</button>
+            </div>
+
+                <script src="script.js"></script>
+
+            </div>
+        </div>
+        <div id="experiences">
+            <div id="expup">
+                <h4>My<span class="skybleu"> Experiences</span></h4>
+            </div>
+            <div id="expcenter">
+                <button class="buttonHbtn"><h1>School Holberton</h1></button>
+            </div>
+            <div id="expdown">
+                <h1>From <span class="orange">7 December of 2025</span> to <span class="orange">12 Decembre of 2025</span><br> On <span class="orange">training</span> at School <span class="orange">Holberton</span></h1>
+                <p>__________________________________________________________________</p>
+                <h5>What i learned: Python, Java Script and Html</h5>
+                <p>__________________________________________________________________</p>
+                <h5>It was a great opportunity to train at Holberton.<br> I learned a bunch of new stuff in only a week!<br>
+                It was really intresting and entertaining.</h5>
+
             </div>
         </div>
     </body>
-</html>
+    </html>
